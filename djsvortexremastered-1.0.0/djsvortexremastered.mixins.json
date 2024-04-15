@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.mcreator.djsvortexremastered.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "DjsvortexremasteredModRepairItemRecipeMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "djsvortexremastered.refmap.json"
+}
