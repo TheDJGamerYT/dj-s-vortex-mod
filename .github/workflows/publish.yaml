@@ -1,0 +1,60 @@
+name: Publish Forge Mod (Modrinth Only)
+
+on:
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: 'Publish build? (true/false)'
+        required: true
+        default: 'false'
+      version_type:
+        description: 'Version type (release / beta / alpha)'
+        required: true
+        default: 'release'
+
+env:
+  JAVA_VERSION: 17
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    # only run if publish is true
+    if: github.event.inputs.publish == 'true'
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: "temurin"
+          java-version: ${{ env.JAVA_VERSION }}
+
+      - name: Make Gradle Wrapper Executable
+        if: ${{ runner.os != 'Windows' }}
+        run: chmod +x ./gradlew
+
+      # Forge-specific datagen step (optional)
+      - name: Run Datagen
+        run: ./gradlew runData
+
+      - name: Build Forge Mod
+        run: ./gradlew clean build
+
+      - name: Publish to Modrinth
+        uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          changelog-file: CHANGELOG.md
+          modrinth-id: YOUR_MODRINTH_PROJECT_ID            # 🔧 replace with your Modrinth project ID
+          modrinth-token: "${{ secrets.MODRINTH_TOKEN }}"
+          github-token: "${{ secrets.GITHUB_TOKEN }}"      # used internally by mc-publish
+          github-generate-changelog: true
+          version-type: ${{ github.event.inputs.version_type }}
+          loaders: forge
+          java: "${{ env.JAVA_VERSION }}"
