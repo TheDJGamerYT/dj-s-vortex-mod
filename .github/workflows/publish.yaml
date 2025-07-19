@@ -41,8 +41,8 @@ jobs:
         run: chmod +x ./gradlew
 
       # Forge-specific datagen step (optional)
-      - name: Run Datagen
-        run: ./gradlew runData
+      #- name: Run Datagen
+        #run: ./gradlew runData
 
       - name: Build Forge Mod
         run: ./gradlew clean build

@@ -277,7 +277,7 @@
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {
-    "BLOCKS:minecraft:needs_iron_tool": [
+    "BLOCKS:minecraft:needs_diamond_tool": [
       "~CUSTOM:RubyBlock",
       "~CUSTOM:RubyOre"
     ],
@@ -326,8 +326,8 @@
     "modid": "vortex",
     "modName": "vortex",
     "version": "1.0.0",
-    "author": "dj, MCreator",
-    "websiteURL": "https://mcreator.net",
+    "author": "DJ Studios",
+    "websiteURL": "https://tdjs.link",
     "license": "Not specified",
     "serverSideOnly": false,
     "requiredMods": [],
@@ -335,6 +335,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.20.1",
+    "credits": "DJ",
     "modElementsPackage": "net.djstudios.vortex"
   },
   "mcreatorVersion": 202400452410

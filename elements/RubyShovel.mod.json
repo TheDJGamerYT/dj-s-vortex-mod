@@ -17,11 +17,11 @@
         "value": "TOOLS"
       }
     ],
-    "efficiency": 6.0,
-    "attackSpeed": 3.0,
-    "enchantability": 14,
-    "damageVsEntity": 4.0,
-    "usageCount": 250,
+    "efficiency": 16.0,
+    "attackSpeed": 5.0,
+    "enchantability": 70,
+    "damageVsEntity": 23.0,
+    "usageCount": 2380,
     "glowCondition": {
       "fixedValue": false
     },
@@ -31,7 +31,7 @@
       }
     ],
     "immuneToFire": false,
-    "blockDropsTier": "IRON",
+    "blockDropsTier": "DIAMOND",
     "blocksAffected": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false
