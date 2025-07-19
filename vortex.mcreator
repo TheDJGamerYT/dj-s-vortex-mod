@@ -1,11 +1,322 @@
 {
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "Ruby",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruby",
+      "metadata": {
+        "files": [
+          "src/main/java/net/djstudios/vortex/item/RubyItem.java",
+          "src/main/resources/assets/vortex/models/item/ruby.json"
+        ]
+      }
+    },
+    {
+      "name": "RubyOre",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruby_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/vortex/blockstates/ruby_ore.json",
+          "src/main/java/net/djstudios/vortex/block/RubyOreBlock.java",
+          "src/main/resources/data/vortex/loot_tables/blocks/ruby_ore.json",
+          "src/main/resources/data/vortex/worldgen/placed_feature/ruby_ore.json",
+          "src/main/resources/data/vortex/forge/biome_modifier/ruby_ore_biome_modifier.json",
+          "src/main/resources/assets/vortex/models/block/ruby_ore.json",
+          "src/main/resources/data/vortex/worldgen/configured_feature/ruby_ore.json",
+          "src/main/resources/assets/vortex/models/item/ruby_ore.json"
+        ]
+      }
+    },
+    {
+      "name": "RubyBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruby_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/djstudios/vortex/block/RubyBlockBlock.java",
+          "src/main/resources/data/vortex/loot_tables/blocks/ruby_block.json",
+          "src/main/resources/assets/vortex/models/item/ruby_block.json",
+          "src/main/resources/assets/vortex/models/block/ruby_block.json",
+          "src/main/resources/assets/vortex/blockstates/ruby_block.json"
+        ]
+      }
+    },
+    {
+      "name": "RubyOreBlockRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruby_ore_block_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/vortex/recipes/ruby_ore_block_recipe.json"
+        ]
+      }
+    },
+    {
+      "name": "RubyBlockOreRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruby_block_ore_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/vortex/recipes/ruby_block_ore_recipe.json"
+        ]
+      }
+    },
+    {
+      "name": "RubyOreSmelting",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruby_ore_smelting",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/vortex/recipes/ruby_ore_smelting.json"
+        ]
+      }
+    },
+    {
+      "name": "RubyPickaxe",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruby_pickaxe",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/vortex/models/item/ruby_pickaxe.json",
+          "src/main/java/net/djstudios/vortex/item/RubyPickaxeItem.java"
+        ]
+      }
+    },
+    {
+      "name": "RubyAxe",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruby_axe",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/vortex/models/item/ruby_axe.json",
+          "src/main/java/net/djstudios/vortex/item/RubyAxeItem.java"
+        ]
+      }
+    },
+    {
+      "name": "RubySword",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruby_sword",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/vortex/models/item/ruby_sword.json",
+          "src/main/java/net/djstudios/vortex/item/RubySwordItem.java"
+        ]
+      }
+    },
+    {
+      "name": "RubyShovel",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruby_shovel",
+      "metadata": {
+        "files": [
+          "src/main/java/net/djstudios/vortex/item/RubyShovelItem.java",
+          "src/main/resources/assets/vortex/models/item/ruby_shovel.json"
+        ]
+      }
+    },
+    {
+      "name": "RubyHoe",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruby_hoe",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/vortex/models/item/ruby_hoe.json",
+          "src/main/java/net/djstudios/vortex/item/RubyHoeItem.java"
+        ]
+      }
+    },
+    {
+      "name": "RubyPickaxeRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruby_pickaxe_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/vortex/recipes/ruby_pickaxe_recipe.json"
+        ]
+      }
+    },
+    {
+      "name": "RubyAxeRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruby_axe_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/vortex/recipes/ruby_axe_recipe.json"
+        ]
+      }
+    },
+    {
+      "name": "RubySwordRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruby_sword_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/vortex/recipes/ruby_sword_recipe.json"
+        ]
+      }
+    },
+    {
+      "name": "RubyShovelRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruby_shovel_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/vortex/recipes/ruby_shovel_recipe.json"
+        ]
+      }
+    },
+    {
+      "name": "RubyHoeRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruby_hoe_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/vortex/recipes/ruby_hoe_recipe.json"
+        ]
+      }
+    },
+    {
+      "name": "RubyArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruby_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/vortex/models/item/ruby_armor_boots.json",
+          "src/main/resources/assets/vortex/models/item/ruby_armor_leggings.json",
+          "src/main/java/net/djstudios/vortex/item/RubyArmorItem.java",
+          "src/main/resources/assets/vortex/models/item/ruby_armor_helmet.json",
+          "src/main/resources/assets/vortex/models/item/ruby_armor_chestplate.json"
+        ]
+      }
+    },
+    {
+      "name": "RubyArmorHelmetRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruby_armor_helmet_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/vortex/recipes/ruby_armor_helmet_recipe.json"
+        ]
+      }
+    },
+    {
+      "name": "RubyArmorChestplateRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruby_armor_chestplate_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/vortex/recipes/ruby_armor_chestplate_recipe.json"
+        ]
+      }
+    },
+    {
+      "name": "RubyArmorLeggingsRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruby_armor_leggings_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/vortex/recipes/ruby_armor_leggings_recipe.json"
+        ]
+      }
+    },
+    {
+      "name": "RubyArmorBootsRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruby_armor_boots_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/vortex/recipes/ruby_armor_boots_recipe.json"
+        ]
+      }
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
-  "tag_elements": {},
+  "tag_elements": {
+    "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:RubyBlock",
+      "~CUSTOM:RubyOre"
+    ],
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:RubyBlock",
+      "~CUSTOM:RubyOre"
+    ],
+    "ITEMS:minecraft:pickaxes": [
+      "~CUSTOM:RubyPickaxe"
+    ],
+    "ITEMS:minecraft:axes": [
+      "~CUSTOM:RubyAxe"
+    ],
+    "ITEMS:minecraft:swords": [
+      "~CUSTOM:RubySword"
+    ],
+    "ITEMS:minecraft:hoes": [
+      "~CUSTOM:RubyHoe"
+    ],
+    "ITEMS:minecraft:shovels": [
+      "~CUSTOM:RubyShovel"
+    ]
+  },
   "tab_element_order": {},
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "item.vortex.ruby_sword": "Ruby Sword",
+      "block.vortex.ruby_ore": "Ruby Ore",
+      "item.vortex.ruby_armor_leggings": "Ruby Leggings",
+      "block.vortex.ruby_block": "Block of Ruby",
+      "item.vortex.ruby_hoe": "Ruby Hoe",
+      "item.vortex.ruby": "Ruby",
+      "item.vortex.ruby_pickaxe": "Ruby Pickaxe",
+      "item.vortex.ruby_shovel": "Ruby Shovel",
+      "item.vortex.ruby_armor_boots": "Ruby Boots",
+      "item.vortex.ruby_armor_helmet": "Ruby Helmet",
+      "item.vortex.ruby_armor_chestplate": "Ruby Chestplate",
+      "item.vortex.ruby_axe": "Ruby Axe"
+    }
   },
   "foldersRoot": {
     "name": "~",
