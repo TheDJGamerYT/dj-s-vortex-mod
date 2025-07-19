@@ -10,7 +10,7 @@ on:
       version_number:
         description: 'Version number (leave blank to use vortex.mcreator)'
         required: false
-        default: ''
+        default: '1.0.1'
       version_type:
         description: 'Version type (release / beta / alpha)'
         required: true
