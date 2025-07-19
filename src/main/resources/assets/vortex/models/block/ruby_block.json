@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "vortex:block/ruby_ore_block",
+    "particle": "vortex:block/ruby_ore_block"
+  },
+  "render_type": "solid"
+}
