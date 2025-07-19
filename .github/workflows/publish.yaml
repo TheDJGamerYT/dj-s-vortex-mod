@@ -7,6 +7,10 @@ on:
         description: 'Publish build? (true/false)'
         required: true
         default: 'false'
+      version_number:
+        description: 'Version number (leave blank to use vortex.mcreator)'
+        required: false
+        default: '1.0.1'
       version_type:
         description: 'Version type (release / beta / alpha)'
         required: true
@@ -21,7 +25,6 @@ permissions:
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
-    # only run if publish is true
     if: github.event.inputs.publish == 'true'
 
     steps:
@@ -40,21 +43,39 @@ jobs:
         if: ${{ runner.os != 'Windows' }}
         run: chmod +x ./gradlew
 
-      # Forge-specific datagen step (optional)
-      #- name: Run Datagen
-        #run: ./gradlew runData
+      # Uncomment if you actually need datagen
+      # - name: Run Datagen
+      #   run: ./gradlew runData
 
       - name: Build Forge Mod
         run: ./gradlew clean build
+
+      # 📄 Read version from vortex.mcreator
+      - name: Read version from vortex.mcreator
+        id: get_version
+        run: |
+          VER=$(jq -r '.version' vortex.mcreator)
+          echo "version=$VER" >> $GITHUB_OUTPUT
+
+      # 🏷️ Pick version: input or vortex.mcreator
+      - name: Set version to use
+        id: pick_version
+        run: |
+          if [ "${{ github.event.inputs.version_number }}" != "" ]; then
+            echo "chosen_version=${{ github.event.inputs.version_number }}" >> $GITHUB_OUTPUT
+          else
+            echo "chosen_version=${{ steps.get_version.outputs.version }}" >> $GITHUB_OUTPUT
+          fi
 
       - name: Publish to Modrinth
         uses: Kir-Antipov/mc-publish@v3.3
         with:
           changelog-file: CHANGELOG.md
-          modrinth-id: t8XrTxoM            # 🔧 replace with your Modrinth project ID
-          modrinth-token: "${{ secrets.MODRINTH_TOKEN }}"
-          github-token: "${{ secrets.GITHUB_TOKEN }}"      # used internally by mc-publish
+          modrinth-id: t8XrTxoM
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           github-generate-changelog: true
           version-type: ${{ github.event.inputs.version_type }}
+          version: ${{ steps.pick_version.outputs.chosen_version }}
           loaders: forge
-          java: "${{ env.JAVA_VERSION }}"
+          java: ${{ env.JAVA_VERSION }}
